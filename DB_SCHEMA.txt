@@ -1,0 +1,29 @@
+-- CRIAÇÃO DA TABELA
+-- ================================================
+
+CREATE TABLE postagens(
+    id_postagem serial PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL, 
+    conteudo TEXT NOT NULL, 
+    data_criacao TIMESTAMP WITHOUT TIME ZONE DEFAULT (NOW() at time zone 'utc+3')
+);
+
+
+-- INSERÇÃO DE DADOS
+-- ================================================
+
+
+INSERT INTO postagens(
+    titulo,
+    conteudo
+) values(
+    'Postatem de teste'
+    'Conteúdo da postagem'
+);
+
+
+-- SELEÇÃO DE DADOS
+-- ================================================
+
+
+SELECT * FROM postagens;
